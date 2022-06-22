@@ -34,12 +34,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # third apps
+
+    # local apps
+    'accounts',
+    'instagram',
     
 ]
 
@@ -104,6 +110,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# accounts.User 을 현재 프로젝트의 User 모델로 사용하겠다 선언
+AUTH_USER_MODEL = "accounts.User"
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
