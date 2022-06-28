@@ -6,6 +6,8 @@ from django.urls import reverse
 
 
 class TimestampedModel(models.Model):
+    # auto_now_add=True 과 auto_now=True 은 model.save 호출 시, 자동으로 시각이 등록 된다.
+    # 중요한 것은 model.save 이지... 쿼리셋.save 가 아니다.
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
